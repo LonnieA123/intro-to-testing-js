@@ -14,10 +14,21 @@ describe('helloWorld', function() {
     });
 });
 
-describe('addOne', function (){
-    it('should be a defined function', function(){
-        expect(typeof addOne).toBe('function');
-    });
+describe('sayHello',
+    function () {
+        it('should return a string when called', function () {
+            expect(typeof helloWorld()).toBe('string')
+        });
+        it("sayHello('Jane')should return 'Hello Jane' ", function () {
+            expect(sayHello('Jane')).toBe('Hello Jane')
+        });
+        it("sayHello('Alex')should return 'Hello Alex' ", function () {
+            expect(sayHello('Alex')).toBe('Hello Alex')
+        });
+        it("sayHello('Pat')should return 'Hello Pat' ", function () {
+            expect(sayHello('Pat')).toBe('Hello Pat')
+        });
+    })
 
 
 
@@ -26,4 +37,24 @@ describe('addOne', function (){
 
 
 
-})
+
+
+
+
+
+
+
+
+
+//
+// describe('addOne', function (){
+//     it('should be a defined function', function(){
+//         expect(typeof addOne).toBe('function');
+//     });
+//     it('should return a number when called', function(){
+//         expect(typeof addOne()).toBe('number')
+//     });
+//     it('should return the number + 1 ', function(){
+//         expect(addOne()).toBe(addOne)
+//     });
+// });
