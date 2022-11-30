@@ -28,6 +28,12 @@ describe('sayHello',
         it("sayHello('Pat')should return 'Hello Pat' ", function () {
             expect(sayHello('Pat')).toBe('Hello Pat')
         });
+        it('by default it should display "Hello World ', function () {
+            expect(sayHello()).toBe("Hello, World")
+        });
+        it('if entered true display "Hello World" ', function () {
+            expect(sayHello(true)).toBe("Hello, World")
+        });
     })
 
 
