@@ -25,3 +25,12 @@ return input == 5
 function isEven(input){
 return input % 2 == 0
 }
+
+function add(input1,input2){
+    if(typeof input2 == 'number' && typeof input1 == 'number'){
+    return input1 + input2 } else{
+        parseInt(input1,input2)
+    }
+}
+
+

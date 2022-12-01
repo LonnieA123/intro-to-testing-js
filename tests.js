@@ -91,14 +91,39 @@ describe('isEven', function() {
     // it('should return false when not given a argument', function() {
     //     expect (isEven("")).toBe(false)
     // });
+
+    // returns false when called without an argument like isEven()
 })
 
 
+describe('add', function (){
+    it('should be a defined function', function(){
+        expect(typeof add).toBe('function');
+    });
+    it('should return a number when called', function(){
+        expect(typeof add()).toBe('number')
+    });
+    it('should return the sum of two numbers', function(){
+        expect(add(1,2)).toBe(3)
+    });
+    it('should return NaN if given a string', function () {
+       expect(add("hello")) .toBe(NaN)
+    });
+});
+
+
+
+// add(2, 3) returns 5
+// add(-3, -9) returns -12
+// add("5", 6) returns 11
+// add("-4", "10") returns 6
+// add("banana", "split") returns NaN
+// add(2, "apples") returns NaN
+// add() returns NaN
 
 
 
 
-// returns false when called without an argument like isEven()
 
 
 
@@ -112,15 +137,5 @@ describe('isEven', function() {
 
 
 
-//
-// describe('addOne', function (){
-//     it('should be a defined function', function(){
-//         expect(typeof addOne).toBe('function');
-//     });
-//     it('should return a number when called', function(){
-//         expect(typeof addOne()).toBe('number')
-//     });
-//     it('should return the number + 1 ', function(){
-//         expect(addOne()).toBe(addOne)
-//     });
-// });
+
+
