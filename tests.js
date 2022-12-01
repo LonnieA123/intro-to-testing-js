@@ -100,15 +100,13 @@ describe('add', function (){
     it('should be a defined function', function(){
         expect(typeof add).toBe('function');
     });
-    it('should return a number when called', function(){
-        expect(typeof add()).toBe('number')
-    });
     it('should return the sum of two numbers', function(){
         expect(add(1,2)).toBe(3)
     });
     it('should return NaN if given a string', function () {
        expect(add("hello")) .toBe(NaN)
     });
+
 });
 
 
@@ -121,7 +119,31 @@ describe('add', function (){
 // add(2, "apples") returns NaN
 // add() returns NaN
 
+describe('isVowel', function (){
+    it('should be a defined function', function(){
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should return a Boolean', function(){
+        expect(typeof isVowel).toBe('function')
+    });
+    it('should return true if given a ', function () {
+        expect(isVowel("a")) .toBe(true)
+    });
+    it('should return false if given a number', function () {
+        expect(isVowel("1")) .toBe(false)
+    });
 
+});
+
+
+
+// isVowel("a") returns true
+// isVowel("A") returns true
+// isVowel("y") returns false
+// isVowel(4) returns false
+// isVowel(true) or isVowel(false) both return false
+// isVowel("banana") returns false
+// isVowel() returns false
 
 
 

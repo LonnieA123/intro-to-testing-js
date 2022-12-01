@@ -23,14 +23,20 @@ return input == 5
 }
 
 function isEven(input){
-return input % 2 == 0
+return input % 2 === 0
 }
 
-function add(input1,input2){
-    if(typeof input2 == 'number' && typeof input1 == 'number'){
-    return input1 + input2 } else{
-        parseInt(input1,input2)
+function add(input1,input2) {
+        return input1 + input2
+}
+
+
+let vowels = ['a','e','i','o','u']
+
+function isVowel(input) {
+    if (input == vowels){
+        return true;
+    } else if (typeof input === 'number'){
+        return false;
     }
-}
-
-
+        }
