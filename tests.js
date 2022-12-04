@@ -100,11 +100,26 @@ describe('add', function (){
     it('should be a defined function', function(){
         expect(typeof add).toBe('function');
     });
-    it('should return the sum of two numbers', function(){
-        expect(add(1,2)).toBe(3)
+    it('add (2,3) returns 5', function(){
+        expect(add(2,3)).toBe(5)
+    });
+    it('add (-3,-9) returns -12', function(){
+        expect(add(-3,-9)).toBe(-12)
+    });
+    it('add ("5",6) returns 5', function(){
+        expect(add('5',6)).toBe(11)
+    });
+    it('add ("-4","10") returns 6', function(){
+        expect(add('-4','10')).toBe(6)
     });
     it('should return NaN if given a string', function () {
-       expect(add("hello")) .toBe(NaN)
+       expect(add("hello")) .toBeNaN()
+    });
+    it('should return NaN if (banana, split)', function () {
+        expect(add('banana','split' )) .toBeNaN()
+    });
+    it('should return NaN if () is empty', function () {
+        expect(add()) .toBeNaN()
     });
 
 });
@@ -126,11 +141,29 @@ describe('isVowel', function (){
     it('should return a Boolean', function(){
         expect(typeof isVowel).toBe('function')
     });
-    it('should return true if given a ', function () {
-        expect(isVowel("a")) .toBe(true)
+    it('should return true if given a', function () {
+        expect(isVowel('a')) .toBe(true)
     });
-    it('should return false if given a number', function () {
-        expect(isVowel("1")) .toBe(false)
+    it('should return true if given A', function () {
+        expect(isVowel('A')) .toBe(true)
+    });
+    it('should return false if given y', function () {
+        expect(isVowel('y')) .toBe(false)
+    });
+    it('should return false if given 4', function () {
+        expect(isVowel('4')) .toBe(false)
+    });
+    it('should return false if given a boolean', function () {
+        expect(isVowel(true)) .toBe(false)
+    });
+    it('should return false if given a "banana"', function () {
+        expect(isVowel("banana")) .toBe(false)
+    });
+    it('should return false if given " "', function () {
+        expect(isVowel(" ")) .toBe(false)
+    });
+    it('should return true if given E', function () {
+        expect(isVowel('E')) .toBe(true)
     });
 
 });

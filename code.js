@@ -27,16 +27,18 @@ return input % 2 === 0
 }
 
 function add(input1,input2) {
-        return input1 + input2
+        return Number(input1) + Number(input2)
+
 }
 
 
-let vowels = ['a','e','i','o','u']
+let vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
 
 function isVowel(input) {
-    if (input == vowels){
-        return true;
-    } else if (typeof input === 'number'){
+    if (typeof input === 'string'){
+        return vowels.includes(input);
+    } else{
         return false;
     }
         }
+
